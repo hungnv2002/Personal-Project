@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout :: main-fragment(
+                                                                     ~{:: title},
+                                                                    'header',
+                                                                    'footer',
+                                                                     ~{:: #css-resources},
+                                                                     ~{:: #js-resources},
+                                                                     ~{:: #main-content}
+                                                                    )}">
+<head>
+    <meta charset="UTF-8">
+    <title>Liên hệ</title>
+    <th:block id="css-resources">
+
+    </th:block>
+</head>
+<body>
+<main class="main" id="main-content">
+    <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/"><i class="icon-home"></i></a></li>
+                <li class="breadcrumb-item active" aria-current="page">Liên hệ</li>
+            </ol>
+        </div><!-- End .container -->
+    </nav>
+
+    <div class="container">
+        <div id="map"> <iframe src="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+nghi%E1%BB%87p+H%C3%A0+N%E1%BB%99i/@21.053736,105.7325319,17z/data=!4m14!1m7!3m6!1s0x31345457e292d5bf:0x20ac91c94d74439a!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBIw6AgTuG7mWk!8m2!3d21.053731!4d105.7351068!16s%2Fm%2F0vb3l31!3m5!1s0x31345457e292d5bf:0x20ac91c94d74439a!8m2!3d21.053731!4d105.7351068!16s%2Fm%2F0vb3l31?entry=ttu" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div><!-- End #map -->
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="light-title">Write <strong>Us</strong></h2>
+
+                <form action="#">
+                    <div class="form-group required-field">
+                        <label for="contact-name">Name</label>
+                        <input type="text" class="form-control" id="contact-name" name="contact-name" required>
+                    </div><!-- End .form-group -->
+
+                    <div class="form-group required-field">
+                        <label for="contact-email">Email</label>
+                        <input type="email" class="form-control" id="contact-email" name="contact-email" required>
+                    </div><!-- End .form-group -->
+
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" class="form-control" id="contact-phone" name="contact-phone">
+                    </div><!-- End .form-group -->
+
+                    <div class="form-group required-field">
+                        <label for="contact-message">What’s on your mind?</label>
+                        <textarea cols="30" rows="1" id="contact-message" class="form-control" name="contact-message" required></textarea>
+                    </div><!-- End .form-group -->
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="light-title"><strong>Thông tin liên hệ</strong></h2>
+
+                <div class="contact-info">
+                    <div>
+                        <i class="icon-mobile"></i>
+                        <p><a href="tel:">0377792002</a></p>
+                    </div>
+                    <div>
+                        <i class="icon-mail-alt"></i>
+                        <p><a href="mailto:#">nvh672002@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-8"></div><!-- margin -->
+</main><!-- End .main -->
+<th:block id="js-resources">
+
+</th:block>
+</body>
+</html>
